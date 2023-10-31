@@ -1,0 +1,10 @@
+.options {
+    display: flex;
+    gap : 10px;
+    justify-content: center;
+    padding: 20px 10px;
+}
+
+.options .material-symbols-outlined {
+    font-size: 30px;
+}
