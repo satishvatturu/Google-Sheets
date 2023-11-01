@@ -27,7 +27,7 @@ function createSerialNumberCells() {
     }
 }
 
-function createRow() {
+function createRow(rowNumber) {
     // creates a row and each row will have 26 columns
     const row = document.createElement("div");
     row.className = "row";
@@ -37,15 +37,20 @@ function createRow() {
         cell.className = "main-cell cell";
         cell.contentEditable = true;
         row.appendChild(cell);
+
+        cell.id = String.fromCharCode(64+i) + rowNumber;
+
+        // adding focus event for every cell.
+        cell.addEventListener("focus",onCellFocus);
     }
     mainContainer.appendChild(row);
 }
 
 function buildMainSection() {
     // loop for 100 times
-    for(let i=0;i<rows;i++)
+    for(let i=1;i<=rows;i++)
     {
-        createRow();
+        createRow(i);
     }
 }
 

@@ -17,13 +17,24 @@
                 <option value="monospace">MonoSpace</option>
                 <option value="sans-serif">Sans Serif</option>
             </select>
-            <input type="number" name="fontsize" min="8" max="24" placeholder="Font Size">
-            <span class="material-symbols-outlined">format_bold</span>
-            <span class="material-symbols-outlined">format_italic</span>
-            <span class="material-symbols-outlined">format_underlined</span>
-            <span class="material-symbols-outlined">format_align_left</span>
-            <span class="material-symbols-outlined">format_align_center</span>
-            <span class="material-symbols-outlined">format_align_right</span>
+            <input id="fontsize" type="number" name="fontsize" min="8" max="24" placeholder="Font Size">
+            <span class="material-symbols-outlined option-btn">format_bold</span>
+            <span class="material-symbols-outlined option-btn">format_italic</span>
+            <span class="material-symbols-outlined option-btn">format_underlined</span>
+            <span class="material-symbols-outlined option-btn">format_align_left</span>
+            <span class="material-symbols-outlined option-btn">format_align_center</span>
+            <span class="material-symbols-outlined option-btn">format_align_right</span>
+            <span class="material-symbols-outlined option-btn">format_color_text</span>
+            <span class="material-symbols-outlined option-btn">format_color_fill</span>
+        </div>
+        <div class="bottom-section">
+            <div id="active-cell">null</div>
+            <input
+              oninput="onChangeFontSize()"
+              type="text"
+              class="expression" 
+              placeholder="f( x )"
+            />
         </div>
     </section>
 
@@ -35,6 +46,7 @@
         </div>
     </section>
 
+    <script src="./options.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
